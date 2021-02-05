@@ -1,0 +1,45 @@
+// api_common.test.js
+const assert = require('assert')
+var urllib = require('urllib');
+var config = require('./config');
+var API = require('../');
+
+describe('api_common.js', function () {
+  describe('mixin', function () {
+    it('should ok', function () {
+      API.mixin({sayHi: function () {}});
+      assert.ok(API.prototype.sayHi )
+    });
+
+    it('should not ok when override method', function () {
+      var obj = {sayHi: function () {}};
+      assert.throws(API.mixin(obj), /Don't allow override existed prototype method\./)
+    });
+  });
+
+  describe('getSuiteToken', function () {
+    it('should ok', async function () {
+      var api = new API(config.suite_id, config.suite_secert, config.suite_ticket);
+      const token = await api.getSuiteToken()
+      assert.ok(token.suiteAccessToken)
+    });
+
+    it('should not ok', async function () {
+      var api = new API('corpid', 'corpsecret', 'suite_ticket');
+      try {
+        await api.getSuiteToken()
+      } catch (err) {
+        assert.ok(err)
+      }
+    });
+  });
+
+  describe('getLatestToken', function () {
+    it('should ok', async function () {
+      var api = new API(config.suite_id, config.suite_secert, config.suite_ticket);
+      const token =  await api.getLatestToken()
+      assert.ok(token.suiteAccessToken)
+    });
+  });
+
+});

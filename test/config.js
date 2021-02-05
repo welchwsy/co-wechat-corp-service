@@ -1,10 +1,10 @@
 // 以下配置信息需要根据实际情况替换
 module.exports = {
-    suite_id: 'tj0aec6******847d95',
-    suite_secert: 'YBYzxE_**************************5m5pN60UUMDsW',
-    suite_ticket: 'get from callback interface', //需要从回调接口获取，每十分钟微信向回调接口发送一次。
-    token: 'EFJV4RW0INNQ3RKaFS23amqTPaea',
-    encodingAESKey: 'g14o2MDEmKvBPAR3xfW5c3BqqB95jsIsVz2SoM2oFxd',
+    suite_id: 'wx50366e917d72903d',
+    suite_secert: 'aVGMqYAlgcnByq9dbeZNVr5K-XMNy3IBN5-YbqAwhJA',
+    suite_ticket: '-4WApFhBUFdL8N_Hbve9yNTxKbShj9lWOBH7GurfJ1PGgPs49coUIBZ2Cq0zL-1S', //需要从回调接口获取，每十分钟微信向回调接口发送一次。
+    token: 'NMBEvFAlZxNdrG1Gxu3cvh',
+    encodingAESKey: 'KovU6wtnjJ8RzKFzLiEvD5p2CO0E7UF7pronGCGhwGj',
     apps: [1, 2, 3, 4, 5],
     auth_code: '********',
     agent: {
