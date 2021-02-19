@@ -11,7 +11,7 @@ wechat corp service
 ## 安装方法
 
 ```sh
-$ npm install wechat-corp-service
+$ npm install co-wechat-corp-service
 ```
 
 ## 使用方法

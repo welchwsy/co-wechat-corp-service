@@ -1,5 +1,5 @@
 {
-  "name": "wechat-corp-service",
+  "name": "co-wechat-corp-service",
   "version": "0.2.1",
   "description": "apis set for wechat 3rd corp service",
   "main": "index.js",
